@@ -1,4 +1,4 @@
-import { Component, computed, Input, input } from '@angular/core';
+import { Component, computed, EventEmitter, Input, input, Output } from '@angular/core';
 
 import { DUMMY_USERS } from '../dummy-user';
 
@@ -12,8 +12,10 @@ import { DUMMY_USERS } from '../dummy-user';
 
 
 export class User {
+  @Input({required:true}) id!: string;
   @Input({required:true}) image!: string;
   @Input({required:true}) name!: string;
+  @Output() select = new EventEmitter();
 
   // image = input.required<string>();
   // name = input.required<string>();
@@ -29,6 +31,9 @@ export class User {
 
 
   onSelectedUserClick(){
+    this.select.emit(this.id);
   }
 
-}
+  }
+
+

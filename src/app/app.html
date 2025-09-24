@@ -3,19 +3,19 @@
 <main>
   <ul>
     <li>
-      <app-user [image]="users[0].avatar" [name]="users[0].name" />
+      <app-user [id]="users[0].id" [image]="users[0].avatar" [name]="users[0].name" (select)="onSelectUser($event)" />
     </li>
 
     <li>
-      <app-user [image]="users[1].avatar" [name]="users[1].name"/>
+      <app-user [id]="users[1].id" [image]="users[1].avatar" [name]="users[1].name" (select)="onSelectUser($event)"/>
     </li>
 
     <li>
-      <app-user [image]="users[2].avatar" [name]="users[2].name"/>
+      <app-user [id]="users[2].id" [image]="users[2].avatar" [name]="users[2].name" (select)="onSelectUser($event)"/>
     </li>
 
     <li>
-      <app-user [image]="users[3].avatar" [name]="users[3].name"/>
+      <app-user [id]="users[3].id" [image]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)"/>
     </li>
   </ul>
 </main>
