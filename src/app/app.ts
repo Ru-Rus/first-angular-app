@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { headerComponent } from './header/header.component';
 import { User } from "./user/user";
+import { DUMMY_USERS } from './dummy-user';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,6 @@ import { User } from "./user/user";
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('first-angular-app');
+  // protected readonly title = signal('first-angular-app');
+  users = DUMMY_USERS;
 }
