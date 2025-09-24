@@ -12,19 +12,21 @@ import { DUMMY_USERS } from '../dummy-user';
 
 
 export class User {
-  // @Input({required:true}) image!: string;
-  // @Input({required:true}) name!: string;
+  @Input({required:true}) image!: string;
+  @Input({required:true}) name!: string;
 
-  image = input.required<string>();
-  name = input.required<string>();
+  // image = input.required<string>();
+  // name = input.required<string>();
 
-  // get imagePath(){
-  //   return 'assets/users/' + this.image;
-  // }
+  // imagePath = computed(()=> {
+  //   return 'assets/user/' + this.image();
+  // });
 
-  imagePath = computed(()=> {
-    return 'assets/user/' + this.image();
-  });
+  get imagePath(){
+    return 'assets/users/' + this.image;
+  }
+
+
 
   onSelectedUserClick(){
   }
