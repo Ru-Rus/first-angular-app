@@ -9,6 +9,16 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   templateUrl: './user.html',
   styleUrl: './user.css'
 })
+
+
 export class User {
   selectedUser = DUMMY_USERS[randomIndex];
+
+  get imagePath (){
+    return 'assets/users/'+ this.selectedUser.avatar
+  }
+
+  onSelectedUserClick(){
+    console.log("click");
+  }
 }
