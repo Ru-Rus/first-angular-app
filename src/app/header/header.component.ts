@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
 selector: 'app-header',
 templateUrl: './header.component.html',
 standalone: true, //but as of now it is set to true in 20 up in 18 down false
+styleUrl:'./header.component.css',
 })
 
 export class headerComponent {};
