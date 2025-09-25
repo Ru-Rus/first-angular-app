@@ -4,10 +4,10 @@ import { headerComponent } from './header/header.component';
 import { User } from "./user/user";
 import { DUMMY_USERS } from './dummy-user';
 import { Tasks } from "./tasks/tasks";
-
+import { NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [headerComponent, User, Tasks],
+  imports: [headerComponent, User, Tasks, NgFor, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
