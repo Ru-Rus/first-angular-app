@@ -2,12 +2,8 @@ import { Component, computed, EventEmitter, Input, input, Output, output } from 
 
 import { DUMMY_USERS } from '../dummy-user';
 
+import { interfaceUser } from './user.model';
 
-interface interfaceUser{
-    id: string;
-    avatar: string;
-    name:string;
-};
 
 @Component({
   selector: 'app-user',

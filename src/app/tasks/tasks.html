@@ -11,17 +11,12 @@
   </header>
 
   <ul>
-    <li>
-      <app-task />
-    </li>
+    @for (index of selectedUserTask; track $index) {
+      <li>
+        <app-task [taskList]="index" />
+      </li>
+    }
 
-     <li>
-      <app-task />
-    </li>
-
-     <li>
-      <app-task />
-    </li>
   </ul>
 
 

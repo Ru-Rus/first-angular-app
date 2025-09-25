@@ -12,7 +12,7 @@
 
   @if (selectedUserId ) {
     <!-- <app-tasks *ngIF="selectedUser; else tempElse"[name]="selectedUser!.name"/> -->
-    <app-tasks [name]="selectedUser.name"/>
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name"/>
   }
   @else {
   <!-- <ng-template #tempElse> -->
