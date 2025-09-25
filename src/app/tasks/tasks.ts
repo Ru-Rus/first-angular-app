@@ -8,5 +8,5 @@ import { User } from '../user/user';
   styleUrl: './tasks.css'
 })
 export class Tasks {
-  @Input({required: true}) name!: string;
+  @Input() name?: string;
 }

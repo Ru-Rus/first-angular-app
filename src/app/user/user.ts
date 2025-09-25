@@ -3,6 +3,12 @@ import { Component, computed, EventEmitter, Input, input, Output, output } from 
 import { DUMMY_USERS } from '../dummy-user';
 
 
+interface interfaceUser{
+    id: string;
+    avatar: string;
+    name:string;
+};
+
 @Component({
   selector: 'app-user',
   imports: [],
@@ -12,9 +18,8 @@ import { DUMMY_USERS } from '../dummy-user';
 
 
 export class User {
-  @Input({required:true}) id!: string;
-  @Input({required:true}) image!: string;
-  @Input({required:true}) name!: string;
+
+  @Input({required:true}) user!: interfaceUser;
   @Output() select = new EventEmitter<string>();
 
   // image = input.required<string>();
@@ -27,13 +32,13 @@ export class User {
   //select = output<string>();
 
   get imagePath(){
-    return 'assets/users/' + this.image;
+    return 'assets/users/' + this.user.avatar;
   }
 
 
 
   onSelectedUserClick(){
-    this.select.emit(this.id);
+    this.select.emit(this.user.id);
   }
 
   }
