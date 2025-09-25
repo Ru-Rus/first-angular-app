@@ -17,7 +17,7 @@ export class User {
 
   @Input({required:true}) user!: interfaceUser;
   @Output() select = new EventEmitter<string>();
-
+  @Input({required:true}) selectedUser!:boolean;
   // image = input.required<string>();
   // name = input.required<string>();
 

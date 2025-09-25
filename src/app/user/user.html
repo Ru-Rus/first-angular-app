@@ -10,7 +10,7 @@
 
 
 <div>
-  <button (click)="onSelectedUserClick()">
+  <button [class.active]="selectedUser" (click)="onSelectedUserClick()">
     <img [src]="imagePath"
     [alt]="user.name"/>
     <span>

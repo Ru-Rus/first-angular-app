@@ -5,7 +5,7 @@
     @for (index of users; track index.id) {
       <!-- <li *NgFor="let index of users"> -->
     <li>
-      <app-user [user]="index" (select)="onSelectUser($event)" />
+      <app-user [selectedUser]="index.id === selectedUserId" [user]="index" (select)="onSelectUser($event)" />
     </li>
     }
   </ul>
