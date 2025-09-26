@@ -62,7 +62,7 @@ export class Tasks {
     this.isAddingTask = true;
   }
 
-  onCloseNewTask(){
+  onCancelNewTask(){
     this.isAddingTask = false;
   }
 

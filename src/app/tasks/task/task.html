@@ -1,19 +1,21 @@
-<article>
-  <h2>
-   {{taskList.title}}
-  </h2>
+<app-card>
+  <article>
+    <h2>
+    {{taskList.title}}
+    </h2>
 
-  <time>
-    {{taskList.dueDate}}
-  </time>
+    <time>
+      {{taskList.dueDate}}
+    </time>
 
-  <p>
-     {{taskList.summary}}
-  </p>
+    <p>
+      {{taskList.summary}}
+    </p>
 
-  <p class="actions">
-    <button (click) = "onCompleteTask()">
-      COMPLETE
-    </button>
-  </p>
-</article>
+    <p class="actions">
+      <button (click) = "onCompleteTask()">
+        COMPLETE
+      </button>
+    </p>
+  </article>
+</app-card>

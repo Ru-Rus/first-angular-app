@@ -9,14 +9,15 @@ import { interfaceNewTask } from '../task/task.model';
   styleUrl: './new-task.css'
 })
 export class NewTask {
-  @Output() close = new EventEmitter<void>();
+  @Output() cancel = new EventEmitter<void>();
   @Output() addTask = new EventEmitter<interfaceNewTask>();
   inputTitle = '';
   inputSummary = '';
   inputDueDate='';
 
   onClose(){
-    this.close.emit();
+    this.cancel.emit();
+    console.log('closed');
   }
 
   onSubmit(){

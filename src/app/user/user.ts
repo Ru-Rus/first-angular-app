@@ -3,11 +3,12 @@ import { Component, computed, EventEmitter, Input, input, Output, output } from 
 import { DUMMY_USERS } from '../dummy-user';
 
 import { interfaceUser } from './user.model';
+import { Card } from "../shared/card/card";
 
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [Card],
   templateUrl: './user.html',
   styleUrl: './user.css'
 })
