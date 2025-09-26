@@ -3,6 +3,7 @@ import { headerComponent } from '../header/header.component';
 import { User } from '../user/user';
 import { Task } from "./task/task";
 import { NewTask } from "./new-task/new-task";
+import { interfaceNewTask } from './task/task.model';
 @Component({
   selector: 'app-tasks',
   imports: [Task, NewTask],
@@ -62,6 +63,17 @@ export class Tasks {
   }
 
   onCloseNewTask(){
+    this.isAddingTask = false;
+  }
+
+  onAddTask(taskData:interfaceNewTask){
+    this.taskList.unshift({
+      id: 'x'+ new Date().getTime().toString() + 'x',
+      userId: this.userId,
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.dueDate
+    })
     this.isAddingTask = false;
   }
 }

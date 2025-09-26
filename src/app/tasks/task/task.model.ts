@@ -5,3 +5,11 @@ export interface interfaceTask{
   summary: string;
   dueDate: string;
 };
+
+
+export interface interfaceNewTask
+  {
+    title: string;
+    summary: string;
+    dueDate: string;
+  };
